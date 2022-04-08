@@ -7,7 +7,7 @@ ADD poetry.lock .
 ADD pyproject.toml .
 ADD main.py .
 ENV PATH "/root/.local/bin:$PATH"
-RUN poetry install
+RUN poetry install -v
 ENV STREAMLIT_SERVER_PORT 8080
 CMD poetry show
 #CMD poetry run python3 -m streamlit run main.py
