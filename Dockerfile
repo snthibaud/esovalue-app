@@ -11,4 +11,4 @@ RUN poetry install
 ENV STREAMLIT_SERVER_PORT 8080
 #CMD ["poetry", "run", "streamlit", "run", "main.py"]
 #CMD ["poetry", "run", "--", "streamlit", "run", "main.py"]
-CMD echo $PATH
+CMD poetry run echo $PATH
