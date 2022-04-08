@@ -3,7 +3,7 @@ steps:
   args:
     - --destination=gcr.io/$PROJECT_ID/eso-app
     - --cache=true
-    - --cache-ttl=XXh
+    - --cache-ttl=168h
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/eso-app']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
