@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/kaniko-project/executor:latest'
   args:
-    - --destination=gcr.io/$PROJECT_ID/eso-app:latest
+    - --destination=gcr.io/$PROJECT_ID/eso-app:$COMMIT_SHA
     - --cache=true
     - --cache-ttl=168h
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -11,8 +11,8 @@ steps:
     - 'deploy'
     - 'eso-app'
     - '--image'
-    - 'gcr.io/$PROJECT_ID/eso-app:latest'
+    - 'gcr.io/$PROJECT_ID/eso-app:$COMMIT_SHA'
     - '--region'
     - 'us-central1'
 images:
-    - 'gcr.io/$PROJECT_ID/eso-app:latest'
+    - 'gcr.io/$PROJECT_ID/eso-app:$COMMIT_SHA'
