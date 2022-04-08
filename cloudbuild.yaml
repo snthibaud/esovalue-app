@@ -14,5 +14,7 @@ steps:
      - 'gcr.io/$PROJECT_ID/eso-app:latest'
      - '--region'
      - 'us-central1'
+     - '--memory'
+     - '4G'
 images:
   - 'gcr.io/$PROJECT_ID/eso-app:latest'
