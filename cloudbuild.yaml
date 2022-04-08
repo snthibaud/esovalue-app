@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/kaniko-project/executor:latest'
   args:
     - --destination=gcr.io/$PROJECT_ID/eso-app:$COMMIT_SHA
-    - --cache=true
+    - --cache=false
     - --cache-ttl=168h
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
