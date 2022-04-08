@@ -7,6 +7,14 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import holoviews as hv
+
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
 pd.options.plotting.backend = 'holoviews'
 
 Number = Union[int, float]
