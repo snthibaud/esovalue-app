@@ -5,7 +5,7 @@ steps:
     - --cache=true
     - --cache-ttl=168h
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/eso-app']
+  args: ['push', 'gcr.io/$PROJECT_ID/eso-app:latest']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
   args:
@@ -13,8 +13,8 @@ steps:
      - 'deploy'
      - 'eso-app'
      - '--image'
-     - 'gcr.io/$PROJECT_ID/eso-app'
+     - 'gcr.io/$PROJECT_ID/eso-app:latest'
      - '--region'
      - 'us-central1'
 images:
-  - 'gcr.io/$PROJECT_ID/eso-app'
+  - 'gcr.io/$PROJECT_ID/eso-app:latest'
