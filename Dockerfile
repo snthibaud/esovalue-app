@@ -9,4 +9,6 @@ ADD main.py .
 ENV PATH "/root/.local/bin:$PATH"
 RUN poetry install
 ENV STREAMLIT_SERVER_PORT 8080
-CMD ["poetry", "run", "streamlit", "run", "main.py"]
+#CMD ["poetry", "run", "streamlit", "run", "main.py"]
+#CMD ["poetry", "run", "--", "streamlit", "run", "main.py"]
+CMD poetry run pwd
