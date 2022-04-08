@@ -16,5 +16,5 @@ steps:
      - 'gcr.io/$PROJECT_ID/eso-app'
      - '--region'
      - 'us-central1'
- images:
+images:
   - 'gcr.io/$PROJECT_ID/eso-app'
