@@ -7,7 +7,6 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
   args:
-    - 'beta'
     - 'run'
     - 'deploy'
     - 'eso-app'
@@ -15,7 +14,5 @@ steps:
     - 'gcr.io/$PROJECT_ID/eso-app:latest'
     - '--region'
     - 'us-central1'
-    - '--execution-environment'
-    - 'gen2'
 images:
     - 'gcr.io/$PROJECT_ID/eso-app:latest'
