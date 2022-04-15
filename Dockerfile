@@ -9,7 +9,4 @@ ADD main.py .
 ENV PATH "/root/.local/bin:$PATH"
 RUN poetry install -vvv
 ENV STREAMLIT_SERVER_PORT 8080
-RUN poetry run echo $PATH
-RUN poetry run which python
-RUN poetry run which streamlit
-CMD ["poetry", "run", "streamlit", "run", "main.py"]
+CMD poetry run streamlit -- run main.py
