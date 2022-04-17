@@ -14,3 +14,4 @@ steps:
     - 'gcr.io/$PROJECT_ID/eso-app:$COMMIT_SHA'
     - '--region'
     - 'us-central1'
+    - '--allow-unauthenticated'
