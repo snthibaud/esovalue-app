@@ -9,4 +9,4 @@ COPY main.py .
 ENV PATH "/root/.local/bin:$PATH"
 RUN poetry install
 ENV STREAMLIT_SERVER_PORT 8080
-CMD HOME=/root poetry run streamlit run main.py
+CMD HOME=/root poetry run streamlit run --health-check-url=health-check main.py
