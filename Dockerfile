@@ -6,7 +6,9 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y curl python3 pyth
 ADD poetry.lock .
 ADD pyproject.toml .
 ADD main.py .
+ADD run.sh .
 ENV PATH "/root/.local/bin:$PATH"
-RUN poetry install -vvv
+RUN poetry install
+RUN chmod +x run.sh
 ENV STREAMLIT_SERVER_PORT 8080
-CMD poetry run streamlit -- run main.py
+CMD ./run.sh
