@@ -17,3 +17,4 @@ steps:
     - '--allow-unauthenticated'
     - '--cpu=4'
     - '--memory=2Gi'
+    - '--timeout=20m'
