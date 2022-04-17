@@ -601,7 +601,7 @@ def _execvpe(file, args, env=None):
     if name != 'nt':
         file = fsencode(file)
         path_list = map(fsencode, path_list)
-    print(path_list)
+    print(list(path_list))
     for dir in path_list:
         fullname = path.join(dir, file)
         try:
