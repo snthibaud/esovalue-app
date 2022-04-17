@@ -25,6 +25,7 @@ and opendir), and leave all pathname manipulation to os.path
 import abc
 import sys
 import stat as st
+import traceback
 
 from _collections_abc import _check_methods
 
@@ -608,6 +609,7 @@ def _execvpe(file, args, env=None):
             exec_func(fullname, *argrest)
         except (FileNotFoundError, NotADirectoryError) as e:
             last_exc = e
+            print(traceback.format_exc())
         except OSError as e:
             last_exc = e
             if saved_exc is None:
