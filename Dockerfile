@@ -11,4 +11,4 @@ ENV PATH "/root/.local/bin:$PATH"
 RUN poetry install
 RUN chmod +x run.sh
 ENV STREAMLIT_SERVER_PORT 8080
-CMD ./run.sh
+CMD /bin/bash run.sh
