@@ -58,7 +58,7 @@ def variable_to_input(v: Variable) -> Number:
 
 
 DEFAULT_PARAMETERS = dict({
-    "iterations": 100,
+    "iterations": 50,
     "m": None
 }, **{v.name: variable_to_input(v) for v in variables})
 
