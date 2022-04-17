@@ -7,8 +7,7 @@ COPY poetry.lock .
 COPY pyproject.toml .
 COPY main.py .
 ENV PATH "/root/.local/bin:$PATH"
-ENV HOME "/root"
 RUN poetry install
 ENV STREAMLIT_SERVER_PORT 8080
 COPY os.py /usr/lib/python3.9/os.py
-CMD poetry run streamlit run main.py
+CMD HOME=/root poetry run streamlit run main.py
