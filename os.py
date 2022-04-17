@@ -602,15 +602,17 @@ def _execvpe(file, args, env=None):
     if name != 'nt':
         file = fsencode(file)
         path_list = map(fsencode, path_list)
-    print(list(path_list))
     for dir in path_list:
         fullname = path.join(dir, file)
+        print(fullname)
         try:
             exec_func(fullname, *argrest)
         except (FileNotFoundError, NotADirectoryError) as e:
             last_exc = e
             print(traceback.format_exc())
         except OSError as e:
+            print("OS error: ")
+            print(e)
             last_exc = e
             if saved_exc is None:
                 saved_exc = e
