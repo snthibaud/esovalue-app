@@ -28,17 +28,29 @@ class Variable(NamedTuple):
     max_value: Optional[Number]
     percentage: bool
     step_size: Optional[Number]
+    tooltip: str
 
 
 variables = [
-    Variable("strike_price", "Strike price", 10.0, 0.0, None, False, 1.0),
-    Variable("stock_price", "Stock price", 10.0, 0.0, None, False, 1.0),
-    Variable("volatility", "Volatility (yearly)", 0.3, 0.0, 2.0, True, None),
-    Variable("risk_free_rate", "Risk-free rate (yearly)", 0.04, 0.0, 2.0, True, None),
-    Variable("dividend_rate", "Dividend rate (yearly)", 0.004, 0.0, 0.2, True, None),
-    Variable("exit_rate", "Employee exit rate (yearly)", 0.2, 0.0, 1.0, True, None),
-    Variable("vesting_years", "Vesting period (years)", 3.0, 0.0, 20.0, False, 0.25),
-    Variable("expiration_years", "Expiration (years)", 5.0, 0.0, 20.0, False, 0.25),
+    Variable("strike_price", "Strike price", 10.0, 0.0, None, False, 1.0,
+             "The strike price is the price at which the company stock may be bought when exercising the option."),
+    Variable("stock_price", "Stock price", 10.0, 0.0, None, False, 1.0, "Current price of the company stock."),
+    Variable("volatility", "Volatility (yearly)", 0.3, 0.0, 2.0, True, None,
+             "The expected volatility of the underlying stock on a yearly basis. "
+             "This may be difficult to estimate before IPO."),
+    Variable("risk_free_rate", "Risk-free rate (yearly)", 0.04, 0.0, 2.0, True, None,
+             "The yearly return that can be expected on a perfectly safe investment. "
+             "In practice, the rate on government bonds is often used for this "
+             "- for example the U.S. 3-Month T-Bill for US stocks/options."),
+    Variable("dividend_rate", "Dividend rate (yearly)", 0.004, 0.0, 0.2, True, None,
+             "The yearly dividend rate (some stocks pay dividends)."),
+    Variable("exit_rate", "Employee exit rate (yearly)", 0.2, 0.0, 1.0, True, None,
+             "The yearly exit rate of employees (the proportion of employees that leaves or is dismissed each year)."),
+    Variable("vesting_years", "Vesting period (years)", 3.0, 0.0, 20.0, False, 0.25,
+             "The minimum number of years to wait before the stock option can be exercised "
+             "(after the option was emitted)."),
+    Variable("expiration_years", "Expiration (years)", 5.0, 0.0, 20.0, False, 0.25,
+             "The number of years until the option expires."),
 ]
 
 
@@ -49,7 +61,8 @@ def variable_to_input(v: Variable) -> Number:
         "min_value": v.min_value * 100 if v.percentage and v.min_value is not None else v.min_value,
         "max_value": v.max_value * 100 if v.percentage and v.max_value is not None else v.max_value,
         "value": v.initial_value * 100 if v.percentage else v.initial_value,
-        "step": v.step_size
+        "step": v.step_size,
+        "help": v.tooltip
     }
     if v.percentage:
         parameters["format"] = "%0.1f %%"
