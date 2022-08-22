@@ -546,14 +546,6 @@ python-versions = ">=3.5"
 traitlets = "*"
 
 [[package]]
-name = "mistune"
-version = "2.0.4"
-description = "A sane Markdown parser with useful plugins and renderers"
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
 name = "mpmath"
 version = "1.2.1"
 description = "Python library for arbitrary-precision floating-point arithmetic"
@@ -1187,7 +1179,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "1883aaa45f52488d24ac08ee1786b412fdadb6fcade72b50cee2338255cb4326"
+content-hash = "2b501e16cf60f16f0a503959e3c8b72f7e811a36fa25ef9bf7446f77062fc51b"
 
 [metadata.files]
 altair = []
@@ -1230,7 +1222,6 @@ jupyterlab-widgets = []
 markdown = []
 markupsafe = []
 matplotlib-inline = []
-mistune = []
 mpmath = []
 nest-asyncio = []
 numpy = []
