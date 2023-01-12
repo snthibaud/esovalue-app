@@ -548,14 +548,14 @@ unit-tests = ["bokeh (>=1.1.0)", "cftime", "codecov", "dash (>=1.16)", "dask", "
 
 [[package]]
 name = "hvplot"
-version = "0.8.0"
+version = "0.8.1"
 description = "A high-level plotting API for the PyData ecosystem built on HoloViews."
 category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "hvplot-0.8.0-py2.py3-none-any.whl", hash = "sha256:0b2ba67bc9ef731c25a8901c7c84bdcb17720b32892507b263194fbc248b5e2a"},
-    {file = "hvplot-0.8.0.tar.gz", hash = "sha256:8630dba34969b105e267cbe14237e2d56d9969c801980ae5e5190bc18b2792d6"},
+    {file = "hvplot-0.8.1-py2.py3-none-any.whl", hash = "sha256:222ce49b3be49741fb23a8c7077720ee2f8f15ea321fce0956bee091aea38bf8"},
+    {file = "hvplot-0.8.1.tar.gz", hash = "sha256:53ddfe06743c4d5924fb1e597655bfa14e80feaf57a438bfd28442d36ac7c2b6"},
 ]
 
 [package.dependencies]
@@ -567,12 +567,11 @@ packaging = "*"
 pandas = "*"
 
 [package.extras]
-all = ["cartopy (>=0.18.0)", "codecov", "dask (>=2021.3.0)", "datashader (>=0.6.5)", "fiona (>=1.8.18)", "flake8", "geopandas (>=0.9.0)", "geoviews (>=1.6.0)", "intake (>=0.6.5)", "intake-parquet (>=0.2.3)", "intake-xarray (>=0.5.0)", "matplotlib", "nbsite (>=0.7.1)", "nbsmoke (>=0.2.0)", "networkx (>=2.6.3)", "notebook (>=5.4)", "numba (>=0.51.0)", "numpy (>=1.7)", "param (>=1.6.1)", "parameterized", "pillow (>=8.2.0)", "plotly", "pooch", "pooch (>=1.6.0)", "pyct (>=0.4.4)", "pydata-sphinx-theme", "pyepsg (>=0.4.0)", "pygraphviz", "pyproj (>=3.0.1)", "pytest", "pytest-cov", "python-snappy (>=0.6.0)", "rasterio (>=1.2.6)", "s3fs (>=2022.1.0)", "scikit-image (>=0.17.2)", "scipy", "scipy (>=1.5.3)", "selenium (>=3.141.0)", "setuptools", "spatialpandas (>=0.4.3)", "sphinx-copybutton", "streamz (>=0.3.0)", "xarray", "xarray (>=0.18.2)"]
+all = ["cartopy", "codecov", "dask (>=2021.3.0)", "datashader (>=0.6.5)", "fiona", "flake8", "geopandas", "geoviews (>=1.6.0)", "intake (>=0.6.5)", "intake-parquet (>=0.2.3)", "intake-xarray (>=0.5.0)", "ipywidgets", "matplotlib", "nbsite (>=0.7.2rc2)", "nbsmoke (>=0.2.0)", "networkx (>=2.6.3)", "notebook (>=5.4)", "numba (>=0.51.0)", "numpy (>=1.7)", "param (>=1.6.1)", "parameterized", "pillow (>=8.2.0)", "plotly", "pooch", "pooch (>=1.6.0)", "pyct (>=0.4.4)", "pydata-sphinx-theme", "pyepsg", "pygraphviz", "pyproj", "pytest", "pytest-cov", "python-snappy (>=0.6.0)", "rasterio", "s3fs (>=2022.1.0)", "scikit-image (>=0.17.2)", "scipy", "scipy (>=1.5.3)", "selenium (>=3.141.0)", "setuptools", "spatialpandas (>=0.4.3)", "sphinx-copybutton", "sphinx-design", "streamz (>=0.3.0)", "xarray", "xarray (>=0.18.2)"]
 build = ["param (>=1.6.1)", "pyct (>=0.4.4)", "setuptools"]
-doc = ["cartopy (>=0.18.0)", "dask (>=2021.3.0)", "datashader (>=0.6.5)", "fiona (>=1.8.18)", "geopandas (>=0.9.0)", "geoviews (>=1.6.0)", "intake (>=0.6.5)", "intake-parquet (>=0.2.3)", "intake-xarray (>=0.5.0)", "matplotlib", "nbsite (>=0.7.1)", "networkx (>=2.6.3)", "notebook (>=5.4)", "numba (>=0.51.0)", "pillow (>=8.2.0)", "plotly", "pooch (>=1.6.0)", "pydata-sphinx-theme", "pyepsg (>=0.4.0)", "pygraphviz", "pyproj (>=3.0.1)", "python-snappy (>=0.6.0)", "rasterio (>=1.2.6)", "s3fs (>=2022.1.0)", "scikit-image (>=0.17.2)", "scipy (>=1.5.3)", "selenium (>=3.141.0)", "spatialpandas (>=0.4.3)", "sphinx-copybutton", "streamz (>=0.3.0)", "xarray (>=0.18.2)"]
-examples = ["cartopy (>=0.18.0)", "dask (>=2021.3.0)", "datashader (>=0.6.5)", "fiona (>=1.8.18)", "geopandas (>=0.9.0)", "geoviews (>=1.6.0)", "intake (>=0.6.5)", "intake-parquet (>=0.2.3)", "intake-xarray (>=0.5.0)", "matplotlib", "networkx (>=2.6.3)", "notebook (>=5.4)", "numba (>=0.51.0)", "pillow (>=8.2.0)", "plotly", "pooch (>=1.6.0)", "pyepsg (>=0.4.0)", "pyproj (>=3.0.1)", "python-snappy (>=0.6.0)", "rasterio (>=1.2.6)", "s3fs (>=2022.1.0)", "scikit-image (>=0.17.2)", "scipy (>=1.5.3)", "selenium (>=3.141.0)", "spatialpandas (>=0.4.3)", "streamz (>=0.3.0)", "xarray (>=0.18.2)"]
-examples-extra = ["cartopy (>=0.18.0)", "dask (>=2021.3.0)", "datashader (>=0.6.5)", "fiona (>=1.8.18)", "geopandas (>=0.9.0)", "geoviews (>=1.6.0)", "intake (>=0.6.5)", "intake-parquet (>=0.2.3)", "intake-xarray (>=0.5.0)", "matplotlib", "networkx (>=2.6.3)", "notebook (>=5.4)", "numba (>=0.51.0)", "pillow (>=8.2.0)", "plotly", "pooch (>=1.6.0)", "pyepsg (>=0.4.0)", "pygraphviz", "pyproj (>=3.0.1)", "python-snappy (>=0.6.0)", "rasterio (>=1.2.6)", "s3fs (>=2022.1.0)", "scikit-image (>=0.17.2)", "scipy (>=1.5.3)", "selenium (>=3.141.0)", "spatialpandas (>=0.4.3)", "streamz (>=0.3.0)", "xarray (>=0.18.2)"]
-tests = ["codecov", "flake8", "matplotlib", "nbsmoke (>=0.2.0)", "numpy (>=1.7)", "parameterized", "plotly", "pooch", "pytest", "pytest-cov", "scipy", "xarray"]
+doc = ["cartopy", "dask (>=2021.3.0)", "datashader (>=0.6.5)", "fiona", "geopandas", "geoviews (>=1.6.0)", "intake (>=0.6.5)", "intake-parquet (>=0.2.3)", "intake-xarray (>=0.5.0)", "matplotlib", "nbsite (>=0.7.2rc2)", "networkx (>=2.6.3)", "notebook (>=5.4)", "numba (>=0.51.0)", "pillow (>=8.2.0)", "plotly", "pooch (>=1.6.0)", "pydata-sphinx-theme", "pyepsg", "pygraphviz", "pyproj", "python-snappy (>=0.6.0)", "rasterio", "s3fs (>=2022.1.0)", "scikit-image (>=0.17.2)", "scipy (>=1.5.3)", "selenium (>=3.141.0)", "spatialpandas (>=0.4.3)", "sphinx-copybutton", "sphinx-design", "streamz (>=0.3.0)", "xarray (>=0.18.2)"]
+examples = ["cartopy", "dask (>=2021.3.0)", "datashader (>=0.6.5)", "fiona", "geopandas", "geoviews (>=1.6.0)", "intake (>=0.6.5)", "intake-parquet (>=0.2.3)", "intake-xarray (>=0.5.0)", "matplotlib", "networkx (>=2.6.3)", "notebook (>=5.4)", "numba (>=0.51.0)", "pillow (>=8.2.0)", "plotly", "pooch (>=1.6.0)", "pyepsg", "pygraphviz", "pyproj", "python-snappy (>=0.6.0)", "rasterio", "s3fs (>=2022.1.0)", "scikit-image (>=0.17.2)", "scipy (>=1.5.3)", "selenium (>=3.141.0)", "spatialpandas (>=0.4.3)", "streamz (>=0.3.0)", "xarray (>=0.18.2)"]
+tests = ["codecov", "flake8", "ipywidgets", "matplotlib", "nbsmoke (>=0.2.0)", "numpy (>=1.7)", "parameterized", "plotly", "pooch", "pytest", "pytest-cov", "scipy", "xarray"]
 
 [[package]]
 name = "idna"
