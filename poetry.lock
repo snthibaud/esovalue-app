@@ -443,18 +443,19 @@ files = [
 
 [[package]]
 name = "esovalue"
-version = "0.1.12"
+version = "0.1.13"
 description = "Valuation of employee stock options"
 category = "main"
 optional = false
 python-versions = ">=3.9,<3.11"
 files = [
-    {file = "esovalue-0.1.12-py3-none-any.whl", hash = "sha256:9bcc4812f0996e492e3b25cf83e17cb0cbc04e0d51ce5e57926fcbc3b8aa1b51"},
-    {file = "esovalue-0.1.12.tar.gz", hash = "sha256:67a80ed876174f04170f29c629cabd142fb96f789fc4cede817ed07488c72abb"},
+    {file = "esovalue-0.1.13-py3-none-any.whl", hash = "sha256:f2da2ec75dfcc0ccd9845c9e0a3f64ef0da43b015cb71a411b4d52dfc2ecd3e3"},
+    {file = "esovalue-0.1.13.tar.gz", hash = "sha256:8b1d572ecbeb5e9fabce055fa643d6679fc974528b2bddc79544bd29ddb18704"},
 ]
 
 [package.dependencies]
 gmpy = "*"
+mistune = ">=2.0.3"
 mpmath = "*"
 Pillow = ">=9.1.1"
 
@@ -890,6 +891,18 @@ files = [
 
 [package.dependencies]
 traitlets = "*"
+
+[[package]]
+name = "mistune"
+version = "2.0.4"
+description = "A sane Markdown parser with useful plugins and renderers"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "mistune-2.0.4-py2.py3-none-any.whl", hash = "sha256:182cc5ee6f8ed1b807de6b7bb50155df7b66495412836b9a74c8fbdfc75fe36d"},
+    {file = "mistune-2.0.4.tar.gz", hash = "sha256:9ee0a66053e2267aba772c71e06891fa8f1af6d4b01d5e84e267b4570d4d9808"},
+]
 
 [[package]]
 name = "mpmath"
