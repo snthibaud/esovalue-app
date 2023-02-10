@@ -1,15 +1,18 @@
+import pathlib
+import shutil
 from functools import partial
 from multiprocessing import Pool
 from typing import NamedTuple, Optional, Union
 
-from esovalue.eso import value_eso
-import streamlit as st
+import holoviews as hv
 import numpy as np
 import pandas as pd
-import holoviews as hv
+import streamlit as st
+from bs4 import BeautifulSoup
+from esovalue.eso import value_eso
 
-st.set_page_config(page_title="WealthWizard - an employee stock option calculator", layout="wide", page_icon=":money_with_wings:")
-st.markdown("""
+GA_ID = "google_analytics"
+GA_JS = """
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q5H0EJGNS"></script>
 <script>
@@ -19,7 +22,28 @@ st.markdown("""
 
   gtag('config', 'G-6Q5H0EJGNS');
 </script>
-""", unsafe_allow_html=True)
+"""
+
+
+def inject_ga():
+    # Insert the script in the head tag of the static template inside your virtual
+    index_path = pathlib.Path(st.__file__).parent / "static" / "index.html"
+    soup = BeautifulSoup(index_path.read_text(), features="html.parser")
+    if not soup.find(id=GA_ID):
+        bck_index = index_path.with_suffix('.bck')
+        if bck_index.exists():
+            shutil.copy(bck_index, index_path)
+        else:
+            shutil.copy(index_path, bck_index)
+        html = str(soup)
+        new_html = html.replace('<head>', '<head>\n' + GA_JS)
+        index_path.write_text(new_html)
+
+
+inject_ga()
+
+
+st.set_page_config(page_title="WealthWizard - an employee stock option calculator", layout="wide", page_icon=":money_with_wings:")
 
 hide_menu_style = """
         <style>

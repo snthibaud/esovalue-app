@@ -10,6 +10,7 @@ streamlit = ">=1.18"
 esovalue = ">=0.1.12"
 hvplot = "*"
 bokeh = "<3"  # Cannot use 3 due to hvplot incompatibility thus far (from bokeh.models import Box in panel.io.model)
+beautifulsoup4 = "*"
 
 [tool.poetry.dev-dependencies]
 
