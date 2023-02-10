@@ -9,6 +9,17 @@ import pandas as pd
 import holoviews as hv
 
 st.set_page_config(page_title="WealthWizard - an employee stock option calculator", layout="wide", page_icon=":money_with_wings:")
+st.markdown("""
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q5H0EJGNS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6Q5H0EJGNS');
+</script>
+""", unsafe_allow_html=True)
 
 hide_menu_style = """
         <style>
