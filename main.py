@@ -8,6 +8,8 @@ import numpy as np
 import pandas as pd
 import holoviews as hv
 
+st.set_page_config(page_title="WealthWizard - an employee stock option calculator", layout="wide", page_icon=":money_with_wings:")
+
 hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden;}
@@ -103,3 +105,7 @@ def plot_free_variable(variable: Variable):
 
 
 plot_free_variable(st.selectbox("Variable to plot: ", variables, format_func=lambda v: v.display_name))
+st.markdown("""
+This employee stock option calculator is based on [esovalue](https://pypi.org/project/esovalue/) - 
+a Python library to value employee stock options. The library can be used directly for more accurate approximations
+""", unsafe_allow_html=True)
