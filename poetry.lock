@@ -1280,14 +1280,14 @@ files = [
 
 [[package]]
 name = "streamlit"
-version = "1.17.0"
+version = "1.18.1"
 description = "The fastest way to build data apps in Python"
 category = "main"
 optional = false
 python-versions = ">=3.7, !=3.9.7"
 files = [
-    {file = "streamlit-1.17.0-py2.py3-none-any.whl", hash = "sha256:0b3a9539e6ebcb8e5d57d16a846c3488143e1954174d7f1b2b40bf3e919302cc"},
-    {file = "streamlit-1.17.0.tar.gz", hash = "sha256:8cdd61059971fd88ae0af507c07685a32fe08ba30ebd04b1d8d2b54160658b5b"},
+    {file = "streamlit-1.18.1-py2.py3-none-any.whl", hash = "sha256:94ed907ccfc6fb8339e5ff09099070935d1290ca788176faf0a9dc1e6f7493b8"},
+    {file = "streamlit-1.18.1.tar.gz", hash = "sha256:22d5fb09dea0b93c988763866203bdecfbc7690471fa9db71533d879877bca6d"},
 ]
 
 [package.dependencies]
@@ -1299,7 +1299,7 @@ gitpython = "!=3.1.19"
 importlib-metadata = ">=1.4"
 numpy = "*"
 packaging = ">=14.1"
-pandas = ">=0.21.0"
+pandas = ">=0.25"
 pillow = ">=6.2.0"
 protobuf = ">=3.12,<4"
 pyarrow = ">=4.0"
@@ -1310,7 +1310,7 @@ requests = ">=2.4"
 rich = ">=10.11.0"
 semver = "*"
 toml = "*"
-tornado = ">=5.0"
+tornado = ">=6.0.3"
 typing-extensions = ">=3.10.0.0"
 tzlocal = ">=1.1"
 validators = ">=0.2"
@@ -1535,4 +1535,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.9.7 || >3.9.7,<3.11"
-content-hash = "891fa07ec767fc9484378c1fe58b1d9f82b80080d4b804b0fcbee2c48d3aa918"
+content-hash = "a8bf36b46a4ff4e011bf6127c98c3ed7c072ed3dc6d3515c81e6cde8f1bf42da"

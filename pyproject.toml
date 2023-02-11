@@ -6,7 +6,7 @@ authors = ["Stéphane Thibaud <snthibaud@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.9.7 || >3.9.7,<3.11"
-streamlit = "<1.18"
+streamlit = "!=1.18"
 esovalue = ">=0.1.12"
 hvplot = "*"
 bokeh = "<3"  # Cannot use 3 due to hvplot incompatibility thus far (from bokeh.models import Box in panel.io.model)
