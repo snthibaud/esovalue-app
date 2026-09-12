@@ -14,9 +14,6 @@ dependencies = [
 [tool.uv]
 package = false
 
-[tool.uv.sources]
-esovalue = { path = "../../../ESOValue", editable = true }
-
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"

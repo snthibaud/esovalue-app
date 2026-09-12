@@ -170,7 +170,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "esovalue", editable = "../../../ESOValue" },
+    { name = "esovalue", specifier = ">=0.1.15" },
     { name = "numpy" },
     { name = "pandas" },
     { name = "streamlit" },
@@ -179,26 +179,13 @@ requires-dist = [
 [[package]]
 name = "esovalue"
 version = "0.1.15"
-source = { editable = "../../../ESOValue" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "mpmath" },
 ]
-
-[package.metadata]
-requires-dist = [{ name = "mpmath" }]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "hvplot" },
-    { name = "hypothesis" },
-    { name = "jupyter", specifier = "~=1.0" },
-    { name = "jupyter-core", specifier = ">=4.11.2" },
-    { name = "nbconvert", specifier = ">=6.3" },
-    { name = "networkx" },
-    { name = "notebook", specifier = ">=6.4.12" },
-    { name = "pytest" },
-    { name = "pytest-xdist" },
-    { name = "scipy", specifier = ">1.6.1" },
+sdist = { url = "https://files.pythonhosted.org/packages/51/c7/b8c46ce417d6ddd1488a0d5ac08bed54ed7357bdf344f53ddf5318cfd31c/esovalue-0.1.15.tar.gz", hash = "sha256:0f33b1c2ce974fa83a0d5182636905052ed546c591b8d0196875685a7161a879", size = 493395, upload-time = "2026-09-12T08:37:49.164Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a9/12/020348799c183ce477b6fa7e7a4331965728778fe315a17b2a86fe53cfd4/esovalue-0.1.15-py3-none-any.whl", hash = "sha256:028c4fd69387ffcb935e4dce02128a769ec02ff8661c65ccdbb012cbad0e58f8", size = 4936, upload-time = "2026-09-12T08:37:47.09Z" },
 ]
 
 [[package]]
