@@ -1,19 +1,19 @@
-[tool.poetry]
+[project]
 name = "eso-website"
 version = "0.1.2"
 description = ""
-authors = ["Stéphane Thibaud <snthibaud@gmail.com>"]
+authors = [{ name = "Stéphane Thibaud", email = "snthibaud@gmail.com" }]
+requires-python = ">=3.14"
+dependencies = [
+    "streamlit",
+    "esovalue>=0.1.15",
+    "pandas",
+    "numpy",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.9,<3.9.7 || >3.9.7,<3.11"
-streamlit = "!=1.18.0"
-esovalue = ">=0.1.12"
-hvplot = "*"
-bokeh = "<3"  # Cannot use 3 due to hvplot incompatibility thus far (from bokeh.models import Box in panel.io.model)
-beautifulsoup4 = "*"
-
-[tool.poetry.dev-dependencies]
+[tool.uv]
+package = false
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
